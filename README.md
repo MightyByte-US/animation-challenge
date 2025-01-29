@@ -11,24 +11,31 @@ The Figma file contains:
 - Animation states reference
 - Component structure
 
-## Animation Requirements
-
 ### Static State
-- Default dragon illustration
+- Default dragon illustration in resting position
 - No animation
 - Normal belly size
 
 ### Breath In (Left Drag)
-- Belly gradually expands based on drag progress
-- Air particles flowing into nose
-- Subtle wing and tail movement
-- All elements synchronized to drag progress (0-1)
+- **Belly Animation:**
+  * Gradual, organic expansion from center
+  * Size increase proportional to drag distance
+  * Smooth deformation without sharp edges
 
 ### Breath Out/Fire (Right Drag)
-- Belly gradually decreases to original size 
-- Fire breathing effect from mouth
-- Subtle wing and tail movement
-- Effect intensity based on drag speed
+- **Belly Animation:**
+  * Natural contraction back to original size
+  * Smooth, elastic-like movement
+  * Speed matches drag velocity
+- **Fire Effect:**
+  * Dynamic flame shape and movement
+  * Intensity and size react to drag speed
+  * Organic flame motion without sharp edges
+
+### Secondary Movements
+- Wing and tail movements should complement breathing actions
+- All transitions should feel natural and weight-appropriate
+- No mechanical or rigid movements
 
 ## Technical Requirements
 
