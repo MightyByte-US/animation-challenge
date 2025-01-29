@@ -1,4 +1,4 @@
-markdownCopy# Rive Animation Challenge: Dragon Breathing Animation
+# Rive Animation Challenge: Dragon Breathing Animation
 
 ## Project Overview
 Create a dragon character animation in Rive that shows natural breathing cycle with belly movement, controlled by drag gesture values.
@@ -46,14 +46,14 @@ The Figma file contains:
 - Fluid particle/fire effects  
 - Synchronized secondary movements
 
-## Deliverables
+## Required Deliverables
 
 ### 1. .riv file including:
 - Dragon character with separate belly layer
 - Particle/fire effects
 - Configured state machine with named inputs
 
-### 2. Brief documentation:
+### 2. Basic Documentation:
 - Input parameters and their ranges
 - Basic state machine structure
 
@@ -62,5 +62,62 @@ The Figma file contains:
 - Quality of particle/fire effects
 - Smoothness of state transitions  
 - Response to input values
+
+## Bonus Points: Detailed Developer Documentation
+
+If you'd like to make the integration process smoother for our development team, you can provide detailed documentation in the following format:
+
+```typescript
+// State Machine Inputs
+interface DragonAnimationInputs {
+ breathInProgress: number;  // Range: 0-1, Controls belly expansion
+ fireIntensity: number;    // Range: 0-1, Controls fire effect
+}
+
+// States
+enum DragonStates {
+ IDLE = 'idle',
+ BREATHING_IN = 'breathingIn',
+ BREATHING_FIRE = 'breathingFire'
+}
+
+// Example of expected behavior
+interface StateMachineConfig {
+ stateMachine: 'DragonControl';
+ inputs: {
+   breathInProgress: {
+     type: 'number';
+     range: [0, 1];
+     description: 'Controls belly expansion and air particle effects';
+     default: 0;
+   };
+   // Other inputs...
+ };
+}
+```
+## How to Submit
+
+### Option 1: GitHub Repository (Preferred)
+1. Create a private repository on GitHub
+2. Include your .riv file and documentation
+3. Share access with: **@mightybyte-yuliapi**
+4. Send a notification email to: yulia@mightybyte.us
+  Subject line: "Rive Animation Challenge - [Your Name]"
+
+### Option 2: Direct Email
+Send your submission to: yulia@mightybyte.us
+Subject line: "Rive Animation Challenge - [Your Name]"
+
+### Submission Package Should Include:
+1. .riv file
+2. README.md with:
+  - Basic documentation
+  - Any special instructions
+  - (Bonus) Developer documentation
+3. Your contact information
+
+### Questions?
+If you have any questions during the challenge, please email yulia@mightybyte.us with subject line "Rive Challenge Question - [Your Name]"
+
 
 _Note: We will handle the React Native integration internally - focus on creating a well-structured Rive animation that responds to external input values._
